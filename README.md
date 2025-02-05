@@ -1,0 +1,3 @@
+# MongoDB $inc operator unexpected behavior
+This example demonstrates an uncommon error related to the use of the `$inc` operator in MongoDB's `updateOne` method.
+The `$inc` operator is typically used to increment a numeric field in a document. However, if the document being updated does not exist, the `updateOne` method will not create it. This might lead to unexpected behavior or logic errors in your application. The solution showcases the correct way to handle this case, either by using the `upsert` option or handling the case where the document is not found explicitly.
